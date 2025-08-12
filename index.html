@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Thabo Jafta</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        backdrop-filter: blur(10px);
+      }
+
+      h1 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 300;
+      }
+
+      .subtitle {
+        color: #7f8c8d;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+
+      .content {
+        margin-bottom: 2rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 2rem 0;
+      }
+
+      .feature-card {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 4px solid #667eea;
+        transition: transform 0.3s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature-card h3 {
+        color: #2c3e50;
+        margin-bottom: 0.5rem;
+      }
+
+      .cta-button {
+        display: inline-block;
+        padding: 12px 30px;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .cta-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+      }
+
+      .footer {
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+        color: #7f8c8d;
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          margin: 1rem;
+          padding: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .feature-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Thabo Jafta</h1>
+      <p class="subtitle">Your Digital Presence Powered by AWS</p>
+
+      <div class="content">
+        <p>
+          This website is hosted on Amazon Web Services using modern cloud
+          infrastructure including S3, CloudFront, and Route53 for optimal
+          performance and reliability.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>🚀 Fast Performance</h3>
+          <p>
+            Delivered via AWS CloudFront CDN for lightning-fast loading times
+            worldwide.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🔒 Secure & Reliable</h3>
+          <p>
+            SSL/TLS encryption and AWS infrastructure ensure your data is safe
+            and secure.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>🌍 Global Reach</h3>
+          <p>
+            Content distributed across AWS edge locations for optimal user
+            experience.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <h3>📱 Responsive Design</h3>
+          <p>Optimized for all devices - desktop, tablet, and mobile.</p>
+        </div>
+      </div>
+
+      <a href="#contact" class="cta-button">Get In Touch</a>
+
+      <div class="footer">
+        <p>&copy; 2025 Thabo Jafta. Powered by AWS Infrastructure.</p>
+        <p>S3 • CloudFront • Route53 • ACM</p>
+      </div>
+    </div>
+
+    <script>
+      // Add some interactive functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll for CTA button
+        document
+          .querySelector(".cta-button")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            alert(
+              "Contact functionality coming soon! This is a demo AWS-hosted website."
+            );
+          });
+
+        // Add animation to feature cards
+        const cards = document.querySelectorAll(".feature-card");
+        cards.forEach((card, index) => {
+          card.style.animationDelay = `${index * 0.1}s`;
+          card.style.animation = "fadeInUp 0.6s ease forwards";
+        });
+      });
+
+      // CSS animation keyframes via JavaScript
+      const style = document.createElement("style");
+      style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(30px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
